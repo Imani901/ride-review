@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 🤖 Bot Battlr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Bot Battlr** is a fun mini React web app where you can build your own custom bot army by selecting from a list of available bots! Practice your skills in **React components**, **props**, **state management**, **events**, and **data fetching** using a local JSON server.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- View a collection of all bots
+- Enlist a bot to your army by clicking it (only once)
+- Release a bot from your army by clicking it again
+- Discharge (delete) a bot from your army forever with a red "X" button
+- Clean and responsive horizontal card layout
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Technologies Used
 
-### `npm test`
+- React (Create React App)
+- JSON Server
+- JavaScript (ES6+)
+- CSS (custom styling)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the Repo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Imani901/bot-battlr.git
+cd bot-battlr
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. npm install
 
-### `npm run eject`
+### 3. Create a db.json file in the root directory and paste the bot data into it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+then run 
+npx json-server --watch db.json --port 8001
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+project structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bot-battlr/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── BotCard.js
+│   │   ├── BotCollection.js
+│   │   └── YourBotArmy.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── db.json
+├── package.json
+└── README.md
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Functional Requirements
+ Display all bots using GET /bots
 
-## Learn More
+ Enlist bot into YourBotArmy (no duplicates)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ Release bot from army on click
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Discharge (delete) bot using DELETE /bots/:id
 
-### Code Splitting
+ Responsive and clean layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
